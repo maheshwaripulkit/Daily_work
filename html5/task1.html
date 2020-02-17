@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myfun()
+{
+var name=document.forms["Regform"]["firstname"];
+var lastname=document.forms["Regform"]["lastname"];
+var price=document.forms["Regform"]["price"];
+var password=document.forms["Regform"]["password"];
+if(name.value=="")
+{
+alert("Enter value please");
+name.focus();
+return false;
+
+
+}
+if(lastname.value=="")
+{
+alert("Enter address please");
+lastname.focus();
+return false;
+
+
+}
+if(price.value=="")
+{
+alert("Enter email address please");
+email.focus();
+return false;
+
+
+}
+if(email.value.indexOf("@",0)<0)
+{
+alert("Enter valid email");
+email.focus();
+return false;
+}
+if(email.value.indexOf(".",0)<0)
+{
+alert("Enter valid email");
+email.focus();
+return false;
+}
+if(password.value=="")
+{
+alert("Enter password please");
+password.focus();
+return false;
+
+
+}
+}
+
+</script>
+<style>
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-top: 1px solid #ddd;
+}
+
+input[type=text], select {
+    margin-left: 57px;
+  width: 95%;
+  padding: 12px 20px;
+  margin: 16px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+ {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+.header {
+  padding: 30px;
+  text-align: right;
+  background-image:url('09.jpg');
+  
+  color: black;
+  font-size: 30px;
+  background-attachment:fixed;
+  background-size:cover;
+}
+</style>
+
+ <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css " rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="header">
+ 
+  <h1> MAHESHWARI INDUSTRIES</h1>
+  <p>ONE STOP FOR ALL THE CLOTHING BRANDS</p>
+</div>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+
+<div>
+
+    
+    <input type="text" id="fname" name="firstname" placeholder="product name" style="margin-left:42px'">
+
+    
+    <input type="text" id="lname" name="lastname" placeholder="Quantity">
+
+    <input type="text"   id="price" class="input group-addon" id="price" name="price"  placeholder="Price">
+  
+    <input type="submit" onclick="myfun()" value="Insert">
+	 <input type="submit"  style="background-color:orange" id="ab" value="Delete ALL">
+	
+	<span class="input group-addon"> $</span>
+	
+	  
+
+	     
+      
+	  
+	  <input type="text" placeholder="Search.." name="search">
+      <button type="submit" style=" height: 40px;
+    width: 4%; onclick="myfun()"><i class="fa fa-search"></i></button>
+	   <br><br>
+	<table>
+  <tr>
+    <th>Product Name</th>
+    <th>Quantity</th>
+	<th>Price</th>
+	<th>total</th>
+  <th colspan="2">Action</th>
+  
+  </tr>
+  <tr>
+    <td id="pro"></td>
+    <td id="quan"></td>
+	<td id = "p"></td>
+	<td id="tot"></td>
+ <td><i class="fa fa-trash-o" aria-hidden="true" style="color:red">
+ <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:black ;margin:5px"></td>
+  </tr>
+  <tr>
+    <td>collar shirt</td>
+    <td>24</td>
+	<td>100</td>
+	<td >2400</td>
+  <td><i class="fa fa-trash-o" aria-hidden="true" style="color:red">
+  <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:black;margin:5px"></td>
+  </tr>
+  <tr>
+    <td>pant</td>
+    <td>21</td>
+	<td>20</td>
+	<td >400</td>
+    <td><i class="fa fa-trash-o" aria-hidden="true" style="color:red">
+	<i class="fa fa-pencil-square-o" aria-hidden="true" style="color:black;margin:5px"></td>
+  </tr>
+  <tr>
+    <td >kurta</td>
+    <td >21</td>
+	<td >34</td>
+	<td >1234</td>
+  <td><i class="fa fa-trash-o" aria-hidden="true" style="color:red"> 
+  <i class="fa fa-pencil-square-o" aria-hidden="true"  style="color:black;margin:5px "></td>
+  
+  </tr>
+</table>
+</div>
+
+</body>
+</html>

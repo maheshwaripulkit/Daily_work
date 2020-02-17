@@ -1,0 +1,205 @@
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: lightblue;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 18px 20px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+.header {
+padding: 59px;
+ 
+  text-align: right;
+  background-image:url('blue.jpg');
+  
+  color:white;
+  font-size: 30px;
+  background-attachment:fixed;
+  background-size:cover;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=date], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+ 
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 54%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+</style>
+
+
+</style>
+<script type="text/javascript">
+    function ageCount() {
+        var birth =  Date.parse('10,02,2001');
+		//var  curdat= document.getElementById("dob").value;
+		var curdat= new Date();
+		var cyr=parseInt(curdat.getFullYear());
+		var byr=parseInt(birth.getFullYear());
+		var x=cyr-byr;
+		document.write("Current date and time "+(cyr-byr));
+		//var date1=new  Date();
+      //  var  dob= document.getElementById("dob").value;
+	//	console.log(dob);
+     ////   var date2=new Date(dob);
+         
+    		//console.log(date2);   
+          //  var y1 = parseInt(date1.getFullYear()); 
+		//	console.log(date1);
+          // var y2 = parseInt(date2.getFullYear()); 
+          //  var age = y1 - y2;         
+          //  document.getElementById("age").innerHTML=age;
+           
+         
+         //   return false;
+        }
+
+    
+</script>
+</head>
+<body>
+<div class="header">
+  <p><u><b>Maheshwari Industries</b></u></p>
+  <p><b> Your next dream home is a step away<b></p>
+</div>
+
+
+
+<ul style="margin-bottom:22px;">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+<div style="width:50%" class="form">
+  <form action="/action_page.php" method="get">
+    <label for="fname">Product Name</label>
+    <input type="text" id="fname" name="firstname" required placeholder="Product name..">
+
+    <label for="lname">Quantity</label>
+    <input type="text" id="lname" name="lastname" required placeholder="Quantity..">
+     
+	 <label for="dob">Date Of Birth</label>
+    <input type="date" id="dob" name="dob"  required placeholder="Date of Birth..">
+	 
+	 <label for="age">Age</label>
+	 <input type="text" id="age"  name="age" placeholder="Age..">
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+  
+    <input type="submit" value="Insert" onclick="ageCount()">
+	 <input type="submit" value="Delete All" onclick="tas.html">
+  </form>
+</div>
+<table id="customers">
+  <tr>
+    <th>Product Name</th>
+    <th>Quantity</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Berglunds snabbköp</td>
+    <td>Christina Berglund</td>
+    <td>Sweden</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  
+  
+  
+</table>
+ 
+
+</div>
+</body>
+</html>

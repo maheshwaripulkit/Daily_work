@@ -1,0 +1,61 @@
+<html>
+<head>
+
+<script>
+function fun()
+ {
+    var name=document.regform.firstname.value;
+	var email=document.regform.email.value;
+	var nameerror="Please write name";
+	var emailerror="Please fill email";
+	var regexs=/^([a-zA-Z0-9_\.\-])+\@([a-zA-Z])+\.([a-z]{2,4})$/;
+	//var regexss= /^ ([a-zA-Z]) $/;
+	if(name== "")
+	{
+	   document.getElementById("abc").innerHTML=nameerror;
+	   return false;
+	}
+	//else if(!regexss.test(name))
+	//{
+	//document.getElementById("abc").innerHTML=nameerror;
+	//}
+	
+	if(email==" ")
+	{
+	document.getElementById("abcd").innerHTML=emailerror;
+	   return false;
+	}
+    
+	if(!regexs.test(email))
+	{
+   document.getElementById("abcd").innerHTML=emailerror;
+   return false;
+	}
+	
+  }
+  function removetext(idtext)
+  {
+   
+  document.getElementById(idtext).innerHTML="";
+  return false;
+  }
+</script>
+</head>
+<body>
+
+
+<form name="regform" onsubmit="return fun()">
+ <div>
+  <label for="name">name</label><br>
+  <input type="text" name="firstname" size="60" onfocus="removetext('abc')">
+  <span id="abc"></span> 
+  </div>
+ <div>
+  <label for="email">email</label><br>
+  <input type="text" name="email" size="60" onfocus="removetext('abcd')">
+  <span id="abcd"></span> 
+  </div>
+  <div>
+  <input type="submit" value="Send" name="Submit">
+  
+ </body>
