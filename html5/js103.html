@@ -1,0 +1,71 @@
+<html>
+<head>
+<title> slice </title>
+<head>
+<body>
+<script type="text/javascript">
+var arr=["apple", "orange", "banana" ,"sugar" , "tea"];
+document.write(arr + "<br>");
+document.write("arr.slice(1,2) : "+ arr.slice(1,5)+"<br>");
+document.write(arr);
+
+document.write("<br>"+arr.push("coffee"));
+document.write("<br>"+arr);
+function f()
+{
+ alert("yeahh");
+}
+ 
+document.write("<br>"+arr.pop());
+document.write("<br>"+arr);
+document.write("<br>"+arr.shift());
+
+
+var girls=["a","b","c"];
+var boys=["d","e","f"];
+var mix=girls.concat(boys);
+document.write("<br>"+ mix+ "<br>");
+
+var numbers=[45,6,7,8,9];
+var txt="";
+var sum=0;
+numbers.forEach(abc);
+
+function abc(value)
+{
+txt=txt+ value + "<br>";
+sum=sum + value;
+return sum;
+}
+document.write(txt);
+document.write("<br>"+sum);
+
+function fun3()
+{
+var numbers=[45,6,7,4,24];
+//var number2=numbers.map(def);
+//document.write(number2+"<br>");
+//document.getElementById("ab").innerHTML=number2;//write(number2);
+//var number2=numbers.filter(myfilterfun);
+//document.write(number2+"<br>");
+//var number2=numbers.reduce(abc);
+//document.write("<br>"+number2);
+document.write((Math.random() * 10));
+}
+function def(value)
+{
+return value*2;
+
+}
+function myfilterfun(value)
+{
+return value>18;
+}
+
+
+</script>
+<br>
+<input type="button" value="click" onclick="fun3()">
+
+</body>
+</html>

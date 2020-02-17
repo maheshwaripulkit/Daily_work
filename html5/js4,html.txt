@@ -1,0 +1,19 @@
+<html>
+<head>
+<script>
+var f;
+function square (x) { return x*x};
+var foo=function(x) {return x*x};
+function square2()
+{
+f=square;
+alert(f(5));
+}
+
+</script>
+</head>
+<body>
+<button onclick="square2()">Click..</button>
+<P>KLEK;TW;T</P>
+</BODY>
+</HTML>
