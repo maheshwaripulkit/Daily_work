@@ -48,7 +48,7 @@ public class Stringexamples {
 		// To display the starting index for the substring "Wa".
 
 		String h = input.substring(str1 - 4);
-		System.out.println("trim=" + h);
+		System.out.println("trim = " + h);
 
 		String e = input.substring(4);
 		System.out.println(e);
